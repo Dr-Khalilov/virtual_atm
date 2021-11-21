@@ -56,7 +56,7 @@ export default class ATMView extends Component {
         event.preventDefault();
         const { values, atmLogic: { withdraw } } = this.state;
         if (Number(values) < 50) {
-            throw new RangeError('Invalid Credentials');
+            alert('Invalid Credentials');
         } else {
             withdraw(Number(values));
         }
